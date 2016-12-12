@@ -4,12 +4,25 @@
 
 body {
   background-color: #4366a0;
+  font-size: 16px;
 }
 
 h1 {
   text-align: center;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+h1::after {
+  content: " ";
+  display: block;
+  margin: 20px auto 50px;
+  position: relative;
+  width: 100px;
+  height: 5px;
+  background: #5b84c4;
 }
 
 .container {
@@ -90,16 +103,16 @@ form input[type=checkbox] {
 }
 
 form input[type=checkbox] + label {
-  color: #FFF;
+  color: #fff;
 }
 
 form input[type=checkbox] + label:before {
-  color: #FFF;
+  color: #fff;
   width: 20px;
   margin-right: 5px;
   content: "\f096";
   font-size: 20px;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   display: inline-block;
 }
 
@@ -111,19 +124,25 @@ form .button {
   background-color: #5b84c4;
   display: inline-block;
   width: auto;
+  margin: 15px 0;
   text-align: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   border: none;
   outline: none;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+form .button:hover {
+  background-color: rgba(91, 132, 196, 0.9);
 }
 
 .error-msg {
   display: none;
   padding: 10px;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid red;
   color: red;
   border-radius: 5px;
@@ -140,7 +159,7 @@ form .button {
   display: none;
   padding: 10px;
   border: 1px solid #5b84c4;
-  background-color: white;
+  background-color: #fff;
   text-align: center;
   color: #5b84c4;
 }
