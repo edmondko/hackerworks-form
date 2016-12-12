@@ -21,8 +21,9 @@ $(document).ready(function() {
     },
     submitHandler: function(form) {
       var dataString = $(form).serialize();
-      var output = urlParamToObject(dataString);
+      var postData = urlParamToObject(dataString);
         $('#register-form').fadeOut(300, function () {
+        console.log('postData', postData);
         $('#success').fadeIn(300)
       });
     },
