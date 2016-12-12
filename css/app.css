@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4366a0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.container {
+  margin: 200px auto;
+  width: 100%;
+  padding: 0 20px;
+  max-width: 480px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+.row {
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: row;
+    -webkit-flex: row no-wrap space-between;
+        -ms-flex: row no-wrap space-between;
+            flex: row no-wrap space-between;
+  }
+}
+
+.row.centered {
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 960px) {
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"] {
+    width: 50%;
+    margin-right: 15px;
+  }
+  form input[type="text"]:nth-child(2n+2),
+  form input[type="email"]:nth-child(2n+2),
+  form input[type="tel"]:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
+form input[type="text"].error,
+form input[type="email"].error,
+form input[type="tel"].error {
+  box-shadow: 0 0 5px red;
+}
+
+form input[type="text"].valid,
+form input[type="email"].valid,
+form input[type="tel"].valid {
+  box-shadow: 0 0 5px green;
+}
+
+form input[type=checkbox] {
+  display: none;
+}
+
+form input[type=checkbox] + label {
+  color: #FFF;
+}
+
+form input[type=checkbox] + label:before {
+  color: #FFF;
+  width: 20px;
+  margin-right: 5px;
+  content: "\f096";
+  font-size: 20px;
+  font-family: 'FontAwesome';
+  display: inline-block;
+}
+
+form input[type=checkbox]:checked + label:before {
+  content: "\f046";
+}
+
+form .button {
+  background-color: #5b84c4;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.error-msg {
+  display: none;
+  padding: 10px;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid red;
+  color: red;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.error-msg label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#success {
+  display: none;
+  padding: 10px;
+  border: 1px solid #5b84c4;
+  background-color: white;
+  text-align: center;
+  color: #5b84c4;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Contact form</h1>
+      <form class="register-form" id="register-form">
+        <div class="row">
+          <input type="text" name="name" placeholder="Name *">
+          <input type="text" name="company" placeholder="Company">
+        </div>
+        <div class="row">
+          <input type="email" name="email" placeholder="E-mail *" class="required-group">
+          <input type="tel" name="phone" placeholder="Phone number"  class="required-group">
+        </div>
+        <div class="row">
+          <div class="error-msg"></div>
+        </div>
+        <div class="row">
+          <input type="checkbox" name="subscribe" id="subscribe" class="checkbox" checked>
+          <label for="subscribe">Subscribe to our newsletter</label>
+        </div>
+        <div class="row centered">
+          <input type="submit" value="Send" class="button">
+        </div>
+      </form>
+      <div id="success">
+        <h2>Thank you for submission</h2>
+      </div>
+    </section>
+  </body>
+</html>

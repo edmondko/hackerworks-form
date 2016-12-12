@@ -1,0 +1,120 @@
+@import 'variables';
+@import 'helpers';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.container {
+  margin: 200px auto;
+  width: 100%;
+  padding: 0 20px;
+  max-width: 480px;
+  @include media(min-width, 960px) {
+    max-width: 800px;
+  }
+}
+
+.row {
+  position: relative;
+  @include media(min-width, 960px) {
+    display: flex;
+    flex: row no-wrap space-between;
+  }
+  &.centered {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+form {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"], {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: $gutter;
+    @include media(min-width, 960px) {
+      width: 50%;
+      margin-right: $gutter;
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+
+    &.error {
+      box-shadow: 0 0 5px red;
+    }
+    &.valid {
+      box-shadow: 0 0 5px green;
+    }
+  }
+
+  input[type=checkbox] {
+    display:none;
+
+    & + label {
+      color: #FFF;
+    }
+    & + label:before {
+      color: #FFF;
+      width: 20px;
+      margin-right: 5px;
+      content: "\f096";
+      font-size: 20px;
+      font-family: 'FontAwesome';
+      display: inline-block;
+    }
+
+    &:checked + label:before {
+      content: "\f046";
+    }
+  }
+
+  .button {
+    background-color: $btn-bg;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+}
+
+.error-msg {
+  display: none;
+  padding: 10px;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid red;
+  color: red;
+  border-radius: 5px;
+  margin-bottom: $gutter;
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $gutter;
+  }
+}
+
+#success {
+  display: none;
+  padding: 10px;
+  border: 1px solid $btn-bg;
+  background-color: white;
+  text-align: center;
+  color: $btn-bg;
+}

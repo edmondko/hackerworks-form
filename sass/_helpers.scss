@@ -1,0 +1,18 @@
+// Grid variables
+$column-width: 50px !default;
+$gutter: 15px !default;
+$total-columns: 12;
+
+@mixin media($property, $breakpoint) {
+  @media ($property: $breakpoint) { @content; }
+}
+
+@mixin columns($column-count, $margin: true) {
+  @include grid-width($column-count);
+  float: left;
+  overflow: hidden;
+  margin-right: $gutter;
+  @if $margin == false {
+    margin-right: 0;
+  }
+}
